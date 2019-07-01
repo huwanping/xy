@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>操场场景</title>
+	
+<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#c1 {
+	position:absolute;
+	left:575px;
+	top:125px;	
+}
+#c2 {
+	position:absolute;
+	left:400px;
+	top:315px;	
+}
+#c3 {
+position:absolute;
+	left:440px;
+	top:15px;	
+}
+#c4 {
+	position: absolute;
+	left: 650px;
+	top: 5px;
+}
+#c5 {
+	position: absolute;
+	left: 140px;
+	top: 255px;
+}
+#c6 {
+	position: absolute;
+	left: 170px;
+	top: 15px;
+}
+
+
+
+.tx1 img:hover{
+	transform:scale(1.1);
+}
+.tx2 img:hover{
+	transform:scale(1.1);
+}
+.tx3 img:hover{
+	transform:scale(1.1);
+}
+
+}
+a img{border:0;}
+a img:hover{border:0;}
+		
+
+#fhml{
+	position:absolute;
+	left:5px;
+	top:555px;	
+}
+#next{
+	position:absolute;
+	left:865px;
+	top:555px;
+}
+	#fhml:hover,#next:hover{
+	transform:scale(1.1);
+}
+		
+	</style>
+<script type="text/javascript">
+function show1(e){
+    var aaa = e.name;
+    if(aaa == "tx1"){
+        document.getElementById("c1").style.display = "block";
+        document.getElementById("c4").style.display = "block";
+    }
+}
+function show2(e){
+    var aaa = e.name;
+    if(aaa == "tx2"){
+        document.getElementById("c2").style.display = "block";
+        document.getElementById("c5").style.display = "block";
+    }
+}
+function show3(e){
+    var aaa = e.name;
+    if(aaa == "tx3"){
+        document.getElementById("c3").style.display = "block";
+        document.getElementById("c6").style.display = "block";
+    }
+}
+
+
+</script>
+</head>
+
+<body>
+<div class="box">
+	<img src="image/cc.jpg" width="1000px" height="630px" alt="操场场景">
+<div>
+<a href="#" class="tx1"><img src="image/ccxr2.png" width="130px" id="c1" onClick="show1(this)" name="tx1"></a> 
+<a href="#" class="tx2"><img src="image/ccxr3.png" width="110px" id="c2" onClick="show2(this)"  name="tx2"> </a>
+<a href="#" class="tx3"><img src="image/ccxr4.png" width="120px" id="c3" onClick="show3(this)"  name="tx3"> </a>
+<img src="image/dhk1.png" width="270px" height="150px" id="c4" onClick="show1(this)" style="display:none">
+<img src="image/dhk2-1.png" width="270px" height="150px" id="c5" onClick="show2(this)" style="display:none">
+<img src="image/dhk3.png" width="270px" height="150px" id="c6" onClick="show3(this)" style="display:none">
+
+</div>		
+	<a href="cc.html"><img id="fhml" src="image/fhsy.png" width="130px" alt="返回操场" title="返回操场"></a>
+	<a href=""><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
+</div>
+</body>
+</html>
+

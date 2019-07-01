@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>教室模拟场景2</title>
+	
+<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#c1 {
+	position: absolute;
+	left: 110px;
+	top: 312px;
+}
+#c2 {
+	position: absolute;
+	left: 720px;
+	top: 310px;
+}
+#c3 {
+	position: absolute;
+	left: 75px;
+	top: 55px;
+}
+#c4 {
+	position: absolute;
+	left: 500px;
+	top: 55px;
+}
+
+.tx1 img:hover{
+	transform:scale(1.1);
+}
+.tx2 img:hover{
+	transform:scale(1.1);
+}
+
+}
+a img{border:0;}
+a img:hover{border:0;}
+		
+
+#fhml{
+	position:absolute;
+	left:5px;
+	top:555px;	
+}
+#next{
+	position:absolute;
+	left:865px;
+	top:555px;
+}
+#fhml:hover,#next:hover{
+	transform:scale(1.1);
+}
+		
+	</style>
+<script type="text/javascript">
+function show1(e){
+    var aaa = e.name;
+    if(aaa == "tx1"){
+        document.getElementById("c1").style.display = "block";
+        document.getElementById("c3").style.display = "block";
+    }
+}
+function show2(e){
+    var aaa = e.name;
+    if(aaa == "tx2"){
+        document.getElementById("c2").style.display = "block";
+        document.getElementById("c4").style.display = "block";
+    }
+}
+
+
+</script>
+</head>
+
+<body>
+<div class="box">
+	<img src="image/js.jpg" width="1000px" height="630px" alt="教室场景">
+<div>
+<a href="#" class="tx1"><img src="image/xr1-2.png" width="170px" height="300px" id="c1" onClick="show1(this)" name="tx1"></a> 
+<a href="#" class="tx2"><img src="image/xr1-1.png" width="150px" height="300px" id="c2" onClick="show2(this)"  name="tx2"> </a>
+<img src="image/jsdh1.png" width="370px" height="250px" id="c3" onClick="show1(this)" style="display:none">
+<img src="image/jsdh2.png" width="370px" height="250px" id="c4" onClick="show2(this)" style="display:none">
+
+</div>		
+	<a href="jxl.html"><img id="fhml" src="image/fhsy.png" width="130px" alt="返回教室" title="返回教室"></a>
+	<a href="jsxts_2.html"><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
+</div>
+</body>
+</html>

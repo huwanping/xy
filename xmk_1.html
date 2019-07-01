@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>校门口场景模拟</title>
+	<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+#d1 {
+	position: absolute;
+	left: 75px;
+	top: 55px;
+}
+#d2 {
+	position: absolute;
+	left: 600px;
+	top: 0px;
+}
+
+.tx1 img:hover{
+	transform:scale(1.1);
+}
+.tx2 img:hover{
+	transform:scale(1.1);
+}
+
+}
+a img{border:0;}
+a img:hover{border:0;}
+		
+
+#fhml{
+	position:absolute;
+	left:0px;
+	top:540px;	
+}
+#next{
+	position:absolute;
+	left:840px;
+	top:540px;
+}
+#fhml:hover,#next:hover{
+	transform:scale(1.1);
+}
+
+		.list{
+	position:absolute;
+	left:2%;
+	top:15px;
+	
+		}
+		#yd1{
+	position:absolute;
+	left:185px;
+	top:370px;	
+}
+	#yd2{
+	position:absolute;
+	left:690px;
+	top:300px;	
+}
+	#yd3{
+	position:absolute;
+	left:550px;
+	top:155px;	
+}
+	#yd4{
+	position:absolute;
+	left:330px;
+	top:205px;	
+}
+
+		#yd3:hover,#yd4:hover{
+	transform:scale(1.1);
+}
+		
+	</style>
+<script type="text/javascript">
+function show1(e){
+    var aaa = e.name;
+    if(aaa == "tx1"){
+        document.getElementById("yd4").style.display = "block";
+        document.getElementById("d1").style.display = "block";
+    }
+}
+function show2(e){
+    var aaa = e.name;
+    if(aaa == "tx2"){
+        document.getElementById("yd3").style.display = "block";
+        document.getElementById("d2").style.display = "block";
+    }
+}
+
+
+</script>
+</head>
+
+<body>
+	<div class="box">
+	<img src="image/xmk.jpg" width="1000px" height="630px" alt="校门口背景">
+		
+		<a href="catalog.html"><img src="image/fhsy.png" alt="返回目录" width="130" id="fhml" title="返回目录"></a>
+		<a href=""><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
+		<img src="image/xmkxr1.png" width="130px" id="yd1" alt="同学1">
+		<img src="image/xmkxr2.png" width="130px" id="yd2" alt="同学2">
+		<div>
+		<a href="#" class="tx1"><img src="image/xmkxr4.png" width="160px"  id="yd4" onClick="show1(this)" name="tx1"></a> 
+		<a href="#" class="tx2"><img src="image/xmkxr3.png" width="120px" id="yd3" onClick="show2(this)"  name="tx2"> </a>
+		<img src="image/xmkdh4.png" width="370px" height="200px" id="d1" onClick="show1(this)" style="display:none">
+		<img src="image/xmkdh1.png" width="270px" height="200px" id="d2" onClick="show2(this)" style="display:none">
+
+</div>		
+		
+	</div>
+</body>
+</html>
