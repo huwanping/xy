@@ -3,53 +3,70 @@
 <head>
 <meta charset="utf-8">
 <title>操场场景</title>
-	<style type="text/css">
-	.a1{
-			position: relative;
-  			width: 1000px;
-  			height:620px;
-  			margin: 0 auto;
-		}
-		.list{
-	position:absolute;
-	left:2%;
-	top:15px;
 	
-		}
-		#yd1{
-	position:absolute;
-	left:655px;
-	top:300px;	
+<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
 }
-	#yd2{
+
+#c1 {
 	position:absolute;
 	left:575px;
 	top:125px;	
 }
-	#yd3{
+#c2 {
 	position:absolute;
 	left:400px;
-	top:305px;	
+	top:315px;	
 }
-	#yd4{
-	position:absolute;
+#c3 {
+position:absolute;
 	left:440px;
-	top:-15px;	
+	top:15px;	
 }
-		#yd5{
-	position:absolute;
-	left:25px;
-	top:530px;	
+#c4 {
+	position: absolute;
+	left: 650px;
+	top: 5px;
+}
+#c5 {
+	position: absolute;
+	left: 140px;
+	top: 255px;
+}
+#c6 {
+	position: absolute;
+	left: 170px;
+	top: 15px;
 }
 
-		#yd4:hover,#yd5:hover{
-	transform:scale(1.1);
-		}
-	#gth {
+#gth {
 	position: absolute;
-	left: 560px;
-	top:5px;
+	left: 515px;
+	top: 20px;
 }
+
+
+.tx3 img:hover{
+	transform:scale(1.1);
+}
+
+a img{border:0;}
+a img:hover{border:0;}
+		
+#next{
+	position:absolute;
+	left:865px;
+	top:555px;
+}
+#next:hover{
+	transform:scale(1.1);
+}
+
 /*	--导航栏-->*/
 	#dh{
 		height:220px;
@@ -111,25 +128,38 @@
 		width:60px;
 		height:30px;
 	}
-/*	导航栏*/
+/*	导航栏*/	
 	</style>
+<script type="text/javascript">
+
+function show3(e){
+    var aaa = e.name;
+    if(aaa == "tx3"){
+        document.getElementById("c3").style.display = "block";
+        document.getElementById("c6").style.display = "block";
+    }
+}
+
+
+</script>
 </head>
 
 <body>
-	<div class="a1">
-	<img src="image/cc.jpg" width="1000px" height="630px" alt="操场背景">
-		<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
-		<div class="list">
-		<a href="catalog.html">
-		<img src="image/fhsy.png" alt="返回目录" width="130" id="yd5"  title="返回目录">
-		</a>
-			<img src="image/ccxr1.png" width="130px" id="yd1" alt="同学1">
-			<img src="image/ccxr2.png" width="130px" id="yd2" alt="同学2">
-			<img src="image/ccxr3.png" width="110px" id="yd3" alt="同学3">
-		<a href="cc_1.html">
-			<img src="image/ccxr4.png" width="120px" id="yd4" alt="被嘲笑的同学" title="点击">
-		</a>
-		</div>
+<div class="box">
+	<img src="image/cc.jpg" width="1000px" height="630px" alt="操场场景">
+	<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
+<div>
+<img src="image/ccxr2.png" width="130px" id="c1" > 
+<img src="image/ccxr3.png" width="110px" id="c2" > 
+<a href="#" class="tx3"><img src="image/ccxr4.png" width="120px" id="c3" onClick="show3(this)"  name="tx3"> </a>
+<img src="image/dhk1.png" width="270px" height="150px" id="c4">
+<img src="image/dhk2-1.png" width="270px" height="150px" id="c5">
+<img src="image/dhk3.png" width="270px" height="150px" id="c6" onClick="show3(this)" style="display:none">
+
+</div>		
+
+<a href="ccxts.html"><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>	
+	
 	<!--导航栏-->
 <div id="dh">
 <ul>
@@ -165,6 +195,8 @@
 </ul>
 </div>
 <!--导航栏-->	
-	</div>
+</div>
 </body>
 </html>
+
+

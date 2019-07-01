@@ -2,64 +2,60 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>目录</title>
-<style type="text/css">
-	a img{
-		border: 0;
-	}	
-	a img:hover{
-			border:0;
-		}
-	body{
-			margin:0;
-		}
-	.a1{
-			position: relative;
-  			width: 1000px;
-  			height:620px;
-  			margin: 0 auto;
-		}
-	.list{
-	position:absolute;
-	left:2%;
-	top:180px;
+<title>操场场景</title>
 	
-		}
-	#yd1{
-	position:absolute;
-	left:85px;
-	top:-5px;	
+<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
 }
-	#yd2{
+
+#c1 {
 	position:absolute;
-	left:635px;
-	top:45px;	
+	left:575px;
+	top:125px;	
 }
-	#yd3{
+#c2 {
 	position:absolute;
-	left:300px;
-	top:225px;	
+	left:400px;
+	top:315px;	
 }
-	#yd4{
-	position:absolute;
-	left:380px;
-	top:-195px;	
+#c3 {
+position:absolute;
+	left:440px;
+	top:15px;	
 }
-	#yd5{
-	position:absolute;
-	left:775px;
-	top:355px;	
+
+#c5 {
+	position: absolute;
+	left: 140px;
+	top: 255px;
 }
-	#yd1:hover,#yd2:hover,#yd3:hover,#yd4:hover,#yd5:hover{
+
+#gth {
+	position: absolute;
+	left: 635px;
+	top: 45px;
+}
+
+
+.tx1 img:hover{
 	transform:scale(1.1);
 }
-	/*	--导航栏-->*/
+
+a img{border:0;}
+a img:hover{border:0;}
+		
+/*	--导航栏-->*/
 	#dh{
 		height:220px;
 		width:60px;
 		position:absolute;
-		top:100px;
-		left:30px;
+		top:20px;
+		left:20px;
 		
 	}
 	#dh ul li img{
@@ -114,31 +110,25 @@
 		width:60px;
 		height:30px;
 	}
-/*	导航栏*/
-</style>
+/*	导航栏*/	
+	</style>
 </head>
 
 <body>
-<div class="a1">
-	<img src="image/catalog.jpg" width="1000px" height="620px" alt="目录">
-	<div class="list">
-	<a href="jxl.html">
-		<img src="image/catalog3.png" width="290px" height="230px" alt="教学楼" id="yd1">
-		</a>
-	<a href="ss.html">
-		<img src="image/catalog4.png" width="290px" height="230px" alt="宿舍" id="yd2">
-		</a>
-	<a href="xmk.html">
-		<img src="image/catalog5.png" width="290px" height="220px" alt="校门口" id="yd3">
-		</a>
-	<a href="cc.html">
-		<img src="image/catalog2.png" width="250px" height="200px" alt="操场" id="yd4">
-		</a>
-	<a href="index.html">
-		<img src="image/fhsy.png" alt="返回首页" width="130" id="yd5">
-		</a>
-		
-	</div>
+<div class="box">
+	<img src="image/cc.jpg" width="1000px" height="630px" alt="操场场景">
+		<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
+<div>
+<a href="cc_1_2.html" class="tx1"><img src="image/ccxr2.png" width="130px" id="c1"></a> 
+<img src="image/ccxr3.png" width="110px" id="c2">
+<img src="image/ccxr4.png" width="120px" id="c3">
+<img src="image/dhk2-1.png" width="270px" height="150px" id="c5">
+
+
+</div>		
+
+
+	
 	<!--导航栏-->
 <div id="dh">
 <ul>
@@ -177,3 +167,4 @@
 </div>
 </body>
 </html>
+

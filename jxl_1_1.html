@@ -2,55 +2,59 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>目录</title>
-<style type="text/css">
-	a img{
-		border: 0;
-	}	
-	a img:hover{
-			border:0;
-		}
-	body{
-			margin:0;
-		}
-	.a1{
-			position: relative;
-  			width: 1000px;
-  			height:620px;
-  			margin: 0 auto;
-		}
-	.list{
-	position:absolute;
-	left:2%;
-	top:180px;
+<title>教学楼场景1</title>
 	
-		}
-	#yd1{
-	position:absolute;
-	left:85px;
-	top:-5px;	
+<style type="text/css">
+	
+.box {
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
 }
-	#yd2{
-	position:absolute;
-	left:635px;
-	top:45px;	
+
+#c1 {
+	position: absolute;
+	left: 100px;
+	top: 322px;
 }
-	#yd3{
-	position:absolute;
-	left:300px;
-	top:225px;	
+#c2 {
+	position: absolute;
+	left: 730px;
+	top: 310px;
 }
-	#yd4{
-	position:absolute;
-	left:380px;
-	top:-195px;	
+#c3 {
+	position: absolute;
+	left: 75px;
+	top: 55px;
 }
-	#yd5{
-	position:absolute;
-	left:775px;
-	top:355px;	
+#c4 {
+	position: absolute;
+	left: 550px;
+	top: 55px;
 }
-	#yd1:hover,#yd2:hover,#yd3:hover,#yd4:hover,#yd5:hover{
+#gth {
+	position: absolute;
+	left: 810px;
+	top: 245px;
+}
+
+.tx2 img:hover{
+	transform:scale(1.1);
+}
+
+
+a img{border:0;}
+a img:hover{border:0;}
+		
+
+
+#next{
+	position:absolute;
+	left:865px;
+	top:555px;
+}
+#next:hover{
 	transform:scale(1.1);
 }
 	/*	--导航栏-->*/
@@ -58,8 +62,8 @@
 		height:220px;
 		width:60px;
 		position:absolute;
-		top:100px;
-		left:30px;
+		top:20px;
+		left:20px;
 		
 	}
 	#dh ul li img{
@@ -114,31 +118,36 @@
 		width:60px;
 		height:30px;
 	}
-/*	导航栏*/
-</style>
+/*	导航栏*/	
+	</style>
+<script type="text/javascript">
+	
+function show2(e){
+    var aaa = e.name;
+    if(aaa == "tx2"){
+        document.getElementById("c2").style.display = "block";
+        document.getElementById("c4").style.display = "block";
+    }
+}
+
+
+</script>
 </head>
 
 <body>
-<div class="a1">
-	<img src="image/catalog.jpg" width="1000px" height="620px" alt="目录">
-	<div class="list">
-	<a href="jxl.html">
-		<img src="image/catalog3.png" width="290px" height="230px" alt="教学楼" id="yd1">
-		</a>
-	<a href="ss.html">
-		<img src="image/catalog4.png" width="290px" height="230px" alt="宿舍" id="yd2">
-		</a>
-	<a href="xmk.html">
-		<img src="image/catalog5.png" width="290px" height="220px" alt="校门口" id="yd3">
-		</a>
-	<a href="cc.html">
-		<img src="image/catalog2.png" width="250px" height="200px" alt="操场" id="yd4">
-		</a>
-	<a href="index.html">
-		<img src="image/fhsy.png" alt="返回首页" width="130" id="yd5">
-		</a>
-		
-	</div>
+<div class="box">
+	<img src="image/js.jpg" width="1000px" height="630px" alt="教室场景">
+	<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
+<div>
+<img src="image/xr4_1.png" width="150px" height="300px" id="c1">
+<a href="#" class="tx2"><img src="image/xr3.png" width="150px" height="300px" id="c2" onClick="show2(this)"  name="tx2"> </a>
+<img src="image/dh1.png" width="370px" height="250px" id="c3">
+<img src="image/dh2-1.png" width="370px" height="250px" id="c4" onClick="show2(this)" style="display:none">
+
+</div>		
+
+	<a href="jsxts_1.html"><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
+	
 	<!--导航栏-->
 <div id="dh">
 <ul>
@@ -177,3 +186,4 @@
 </div>
 </body>
 </html>
+

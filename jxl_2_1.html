@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>操场场景</title>
+<title>教室模拟场景2</title>
 	
 <style type="text/css">
 	
@@ -14,42 +14,47 @@
 }
 
 #c1 {
-	position:absolute;
-	left:575px;
-	top:125px;	
+	position: absolute;
+	left: 110px;
+	top: 312px;
 }
 #c2 {
-	position:absolute;
-	left:400px;
-	top:315px;	
+	position: absolute;
+	left: 720px;
+	top: 310px;
 }
 #c3 {
-position:absolute;
-	left:440px;
-	top:15px;	
-}
-#gth {
 	position: absolute;
-	left: 415px;
-	top: 225px;
+	left: 75px;
+	top: 55px;
+}
+#c4 {
+	position: absolute;
+	left: 500px;
+	top: 55px;
 }
 
 .tx2 img:hover{
 	transform:scale(1.1);
 }
 
-
+}
 a img{border:0;}
 a img:hover{border:0;}
-		
 
-#fhml{
-	position:absolute;
-	left:5px;
-	top:555px;	
+	#gth {
+	position: absolute;
+	left: 830px;
+	top: 275px;
 }
 
-	#fhml:hover{
+
+#next{
+	position:absolute;
+	left:865px;
+	top:555px;
+}
+#next:hover{
 	transform:scale(1.1);
 }
 /*	--导航栏-->*/
@@ -113,23 +118,40 @@ a img:hover{border:0;}
 		width:60px;
 		height:30px;
 	}
-/*	导航栏*/	
+/*	导航栏*/		
 	</style>
+<script type="text/javascript">
+function show1(e){
+    var aaa = e.name;
+    if(aaa == "tx1"){
+        document.getElementById("c1").style.display = "block";
+        document.getElementById("c3").style.display = "block";
+    }
+}
+function show2(e){
+    var aaa = e.name;
+    if(aaa == "tx2"){
+        document.getElementById("c2").style.display = "block";
+        document.getElementById("c4").style.display = "block";
+    }
+}
 
+
+</script>
 </head>
 
 <body>
 <div class="box">
-	<img src="image/cc.jpg" width="1000px" height="630px" alt="操场场景">
+	<img src="image/js.jpg" width="1000px" height="630px" alt="教室场景">
 	<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
 <div>
-<img src="image/ccxr2.png" width="130px" id="c1"> 
-<a href="cc_1_1.html" class="tx2"><img src="image/ccxr3.png" width="110px" id="c2"> </a>
-<img src="image/ccxr4.png" width="120px" id="c3">
+<img src="image/xr1-2.png" width="170px" height="300px" id="c1">
+<a href="#" class="tx2"><img src="image/xr1-1.png" width="150px" height="300px" id="c2" onClick="show2(this)"  name="tx2"> </a>
+<img src="image/jsdh1.png" width="370px" height="250px" id="c3">
+<img src="image/jsdh2.png" width="370px" height="250px" id="c4" onClick="show2(this)" style="display:none">
 
 </div>		
-	<a href="cc.html"><img id="fhml" src="image/fhsy.png" width="130px" alt="返回操场" title="返回操场"></a>
-
+	<a href="jsxts_2.html"><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
 	
 	<!--导航栏-->
 <div id="dh">
@@ -169,4 +191,3 @@ a img:hover{border:0;}
 </div>
 </body>
 </html>
-

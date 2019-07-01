@@ -23,23 +23,17 @@
 	left: 730px;
 	top: 310px;
 }
-#c3 {
+#gth {
 	position: absolute;
-	left: 75px;
-	top: 55px;
+	left: 160px;
+	top: 245px;
 }
-#c4 {
-	position: absolute;
-	left: 550px;
-	top: 55px;
-}
+
 
 .tx1 img:hover{
 	transform:scale(1.1);
 }
-.tx2 img:hover{
-	transform:scale(1.1);
-}
+
 
 }
 a img{border:0;}
@@ -59,40 +53,118 @@ a img:hover{border:0;}
 	#fhml:hover,#next:hover{
 	transform:scale(1.1);
 }
+	/*	--导航栏-->*/
+	#dh{
+		height:220px;
+		width:60px;
+		position:absolute;
+		top:20px;
+		left:20px;
 		
+	}
+	#dh ul li img{
+		height:57px;
+		width:57px;
+	}
+	#dh ul li img:hover{
+		height:63px;
+		width:63px;
+	}
+	#dh ul li a{
+		text-decoration:none;
+		display: block;
+		text-align: center;
+		
+		font-size: 35px;
+	}
+	#dh ul{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+	}
+	#dh ul li ul{
+		display:none;
+	}
+	#dh ul li:hover ul{
+		display:block;
+		position: absolute;
+		top:50px;
+		left:55px;
+	}
+	#dh ul li ul li{
+		float:right;
+		position:relative;
+	}
+	#dh ul li:hover ul li a{
+		color:#771652;
+		font-size: 17px;
+		width:40px;
+	}
+	#dh ul li:hover ul li a:hover{
+		font-size: 20px;
+	}
+	#dh ul li:hover ul li ul{450px;;
+		display:none;
+	}
+	#dh ul li:hover ul li:hover ul{
+		display:block;
+		position:absolute;
+		top:15px;
+		left:50px;
+		width:60px;
+		height:30px;
+	}
+/*	导航栏*/	
 	</style>
-<script type="text/javascript">
-function show1(e){
-    var aaa = e.name;
-    if(aaa == "tx1"){
-        document.getElementById("c1").style.display = "block";
-        document.getElementById("c3").style.display = "block";
-    }
-}
-function show2(e){
-    var aaa = e.name;
-    if(aaa == "tx2"){
-        document.getElementById("c2").style.display = "block";
-        document.getElementById("c4").style.display = "block";
-    }
-}
 
-
-</script>
 </head>
 
 <body>
 <div class="box">
 	<img src="image/js.jpg" width="1000px" height="630px" alt="教室场景">
-<div>
-<a href="#" class="tx1"><img src="image/xr4_1.png" width="150px" height="300px" id="c1" onClick="show1(this)" name="tx1"></a> 
-<a href="#" class="tx2"><img src="image/xr3.png" width="150px" height="300px" id="c2" onClick="show2(this)"  name="tx2"> </a>
-<img src="image/dh1.png" width="370px" height="250px" id="c3" onClick="show1(this)" style="display:none">
-<img src="image/dh2-1.png" width="370px" height="250px" id="c4" onClick="show2(this)" style="display:none">
 
-</div>		
+	<img src="image/gth.png" width="100px" alt="感叹号" id="gth">
+<a href="jxl_1_1.html" class="tx1"><img src="image/xr4_1.png" width="150px" height="300px" id="c1"></a> 
+<img src="image/xr3.png" width="150px" height="300px" id="c2" >
+
+		
 	<a href="jxl.html"><img id="fhml" src="image/fhsy.png" width="130px" alt="返回教室" title="返回教室"></a>
-	<a href="jsxts_1.html"><img id="next" src="image/next.png" width="130px" alt="下一页" title="下一页"></a>
+	
+	<!--导航栏-->
+<div id="dh">
+<ul>
+
+<li><a href="#"><img src="image/nz.png" alt="导航栏"></a>
+<ul>
+<li><a href="index.html"><img src="image/sj.png"></a>
+<ul>
+<li>首页</li>
+</ul>
+</li>
+
+<li><a href="catalog.html"><img src="image/xq.png"></a>
+<ul>
+<li>目录</li>
+</ul>
+</li>
+
+<li><a href="#"><img src="image/fh.png"></a>
+<ul>
+<li>游戏</li>
+</ul>
+</li>
+	
+<li><a href="#"><img src="image/cz.png"></a>
+<ul>
+<li>练习</li>
+</ul>
+</li>
+
+</ul>
+</li>
+</ul>
+</div>
+<!--导航栏-->	
 </div>
 </body>
 </html>
