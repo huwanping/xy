@@ -32,33 +32,48 @@
 }
 	#yd2{
 	position:absolute;
-	left:635px;
-	top:45px;	
+	left:330px;
+	top:-2px;	
 }
 	#yd3{
 	position:absolute;
-	left:300px;
-	top:225px;	
+	left:400px;
+	top:150px;	
 }
 	#yd4{
 	position:absolute;
-	left:380px;
-	top:-195px;	
+	left:700px;
+	top:100px;	
 }
 	#yd5{
+	position:absolute;
+	left:470px;
+	top:40px;	
+}
+	#yd6{
 	position:absolute;
 	left:775px;
 	top:355px;	
 }
-	#yd1:hover,#yd2:hover,#yd3:hover,#yd4:hover,#yd5:hover{
+	#yd1:hover,#yd2:hover,#yd3:hover,#yd4:hover,#yd5:hover,#yd6:hover{
 	transform:scale(1.1);
 }
+	.lb{
+	position:absolute;
+	left:900px;	
+	bottom:550px;
+	}
+.lb:hover{
+	transform:scale(1.1);
+	cursor:pointer;
+	border:none;
+	}
 	/*	--导航栏-->*/
 	#dh{
-		height:220px;
+		height:330px;
 		width:60px;
 		position:absolute;
-		top:100px;
+		top:10px;
 		left:30px;
 		
 	}
@@ -88,6 +103,7 @@
 	#dh ul li:hover ul{
 		display:block;
 		position: absolute;
+		color: #476DA8;
 		top:50px;
 		left:55px;
 	}
@@ -120,25 +136,42 @@
 
 <body>
 <div class="a1">
-	<img src="image/catalog.jpg" width="1000px" height="620px" alt="目录">
+	<img src="image/catalog.png" width="1000px" height="620px" alt="目录">
 	<div class="list">
 	<a href="jxl.html">
-		<img src="image/catalog3.png" width="290px" height="230px" alt="教学楼" id="yd1">
+		<img src="image/fz1.png" width="290px" height="230px" alt="教学楼" id="yd1">
 		</a>
-	<a href="ss.html">
-		<img src="image/catalog4.png" width="290px" height="230px" alt="宿舍" id="yd2">
+	<a href="lx.html">
+		<img src="image/fz3.png" width="160px" height="150px" alt="习题练练" id="yd2">
 		</a>
 	<a href="xmk.html">
-		<img src="image/catalog5.png" width="290px" height="220px" alt="校门口" id="yd3">
+		<img src="image/fz2.png" width="300px" height="290px" alt="校门口" id="yd3">
 		</a>
 	<a href="cc.html">
-		<img src="image/catalog2.png" width="250px" height="200px" alt="操场" id="yd4">
+		<img src="image/fz5.png" width="290px" height="230px" alt="操场" id="yd4">
+		</a>
+		<a href="game.html">
+		<img src="image/fz4.png" width="170px" height="150px" alt="乐趣游戏" id="yd5">
 		</a>
 	<a href="index.html">
-		<img src="image/fhsy.png" alt="返回首页" width="130" id="yd5">
-		</a>
-		
+		<img src="image/fhsy.png" alt="返回首页" width="130" id="yd6">
+		</a>		
 	</div>
+<div class="lb">   	
+    	<audio src="music/catalog.mp3" controls preload id="music" hidden></audio>
+    	<lable id="bf" onClick="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
+    	<script>
+			function bf(){
+				var audio=document.getElementById('music');
+				if(audio.paused){
+					audio.play();
+				}
+				else{
+					audio.pause();
+			}
+			}
+			</script>
+</div>
 	<!--导航栏-->
 <div id="dh">
 <ul>

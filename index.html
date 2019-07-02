@@ -21,13 +21,23 @@
 	left:240px;	
 	top:470px;
 }
+.lb{
+	position:absolute;
+	left:850px;	
+	bottom:550px;
+	}
+.lb:hover{
+	transform:scale(1.1);
+	cursor:pointer;
+	border:none;
+	}
 /*	--导航栏-->*/
 	#dh{
 		height:220px;
 		width:60px;
 		position:absolute;
 		top:150px;
-		left:30px;
+		left:50px;
 		
 	}
 	#dh ul li img{
@@ -58,6 +68,7 @@
 		position: absolute;
 		top:50px;
 		left:55px;
+		color: antiquewhite;
 	}
 	#dh ul li ul li{
 		float:right;
@@ -77,8 +88,8 @@
 	#dh ul li:hover ul li:hover ul{
 		display:block;
 		position:absolute;
-		top:15px;
-		left:50px;
+		top:20px;
+		left:40px;
 		width:60px;
 		height:30px;
 	}
@@ -92,8 +103,23 @@
 <div class="title">
 	<a href="catalog.html">
 		<img src="image/jr.png" width="150px" alt="进入校园">
-	
 	</a>
+</div>
+<div class="lb">   	
+    	<audio src="music/index.mp3" controls preload id="music" hidden></audio>
+    	<lable id="bf" onClick="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
+    	<script>
+			function bf(){
+				var audio=document.getElementById('music');
+				if(audio.paused){
+					audio.play();
+				}
+				else{
+					audio.pause();
+			}
+			}
+
+	</script>
 </div>
 	
 	<div id="dh">
@@ -113,13 +139,13 @@
 </ul>
 </li>
 
-<li><a href="#"><img src="image/fh.png"></a>
+<li><a href="game.html"><img src="image/fh.png"></a>
 <ul>
 <li>游戏</li>
 </ul>
 </li>
 	
-<li><a href="#"><img src="image/cz.png"></a>
+<li><a href="lx.html"><img src="image/cz.png"></a>
 <ul>
 <li>练习</li>
 </ul>
@@ -129,7 +155,6 @@
 </li>
 </ul>
 </div>
-<!--导航栏-->
 </div>
 	
 	

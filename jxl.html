@@ -23,8 +23,8 @@
 }
 	#yd2{
 	position:absolute;
-	left:75px;
-	top:185px;	
+	left:160px;
+	top:190px;	
 }
 	#yd3{
 	position:absolute;
@@ -33,7 +33,7 @@
 }
 	#yd4{
 	position:absolute;
-	left:190px;
+	left:270px;
 	top:255px;	
 }
 		#yd5{
@@ -43,7 +43,7 @@
 }
 		#gth1 {
 	position: absolute;
-	left: 220px;
+	left: 280px;
 	top: 175px;
 }
 		#gth2 {
@@ -55,13 +55,23 @@
 		#yd1:hover,#yd2:hover,#yd4:hover,#yd5:hover{
 	transform:scale(1.1);
 }
+	.lb{
+	position:absolute;
+	left:900px;	
+	bottom:550px;
+	}
+.lb:hover{
+	transform:scale(1.1);
+	cursor:pointer;
+	border:none;
+	}
 /*	--导航栏-->*/
 	#dh{
 		height:220px;
 		width:60px;
 		position:absolute;
-		top:20px;
-		left:20px;
+		top:30px;
+		left:50px;
 		
 	}
 	#dh ul li img{
@@ -76,7 +86,7 @@
 		text-decoration:none;
 		display: block;
 		text-align: center;
-		
+		color: #D88485;
 		font-size: 35px;
 	}
 	#dh ul{
@@ -111,8 +121,9 @@
 	#dh ul li:hover ul li:hover ul{
 		display:block;
 		position:absolute;
-		top:15px;
-		left:50px;
+		color:#E2F4E3;
+		top:20px;
+		left:40px;
 		width:60px;
 		height:30px;
 	}
@@ -137,6 +148,21 @@
 			<img src="image/xr5.png" width="130px" id="yd3" alt="班长">
 				
 		</div>
+<div class="lb">   	
+    	<audio src="music/catalog.mp3" controls preload id="music" hidden></audio>
+    	<lable id="bf" onClick="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
+    	<script>
+			function bf(){
+				var audio=document.getElementById('music');
+				if(audio.paused){
+					audio.play();
+				}
+				else{
+					audio.pause();
+			}
+			}
+			</script>
+</div>
 <!--导航栏-->
 <div id="dh">
 <ul>
@@ -155,13 +181,13 @@
 </ul>
 </li>
 
-<li><a href="#"><img src="image/fh.png"></a>
+<li><a href="game.html"><img src="image/fh.png"></a>
 <ul>
 <li>游戏</li>
 </ul>
 </li>
 	
-<li><a href="#"><img src="image/cz.png"></a>
+<li><a href="lx.html"><img src="image/cz.png"></a>
 <ul>
 <li>练习</li>
 </ul>

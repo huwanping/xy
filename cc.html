@@ -50,13 +50,23 @@
 	left: 560px;
 	top:5px;
 }
+			.lb{
+	position:absolute;
+	left:900px;	
+	bottom:550px;
+	}
+.lb:hover{
+	transform:scale(1.1);
+	cursor:pointer;
+	border:none;
+	}
 /*	--导航栏-->*/
 	#dh{
 		height:220px;
 		width:60px;
 		position:absolute;
-		top:20px;
-		left:20px;
+		top:40px;
+		left:50px;
 		
 	}
 	#dh ul li img{
@@ -106,6 +116,7 @@
 	#dh ul li:hover ul li:hover ul{
 		display:block;
 		position:absolute;
+		color:#A53E40;
 		top:15px;
 		left:50px;
 		width:60px;
@@ -130,6 +141,21 @@
 			<img src="image/ccxr4.png" width="120px" id="yd4" alt="被嘲笑的同学" title="点击">
 		</a>
 		</div>
+		<div class="lb">   	
+    	<audio src="music/cc.mp3" controls preload id="music" hidden></audio>
+    	<lable id="bf" onClick="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
+    	<script>
+			function bf(){
+				var audio=document.getElementById('music');
+				if(audio.paused){
+					audio.play();
+				}
+				else{
+					audio.pause();
+			}
+			}
+			</script>
+</div>
 	<!--导航栏-->
 <div id="dh">
 <ul>
@@ -148,13 +174,13 @@
 </ul>
 </li>
 
-<li><a href="#"><img src="image/fh.png"></a>
+<li><a href="game.html"><img src="image/fh.png"></a>
 <ul>
 <li>游戏</li>
 </ul>
 </li>
 	
-<li><a href="#"><img src="image/cz.png"></a>
+<li><a href="lx.html"><img src="image/cz.png"></a>
 <ul>
 <li>练习</li>
 </ul>
