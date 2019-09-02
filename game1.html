@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拼图</title>
+<style type="text/css">
+	.a1{
+			position: relative;
+  			width: 1000px;
+  			height:620px;
+  			margin: 0 auto;
+		}
+	h3{
+		text-align: center;
+		color:#D87C7D;
+		font-size:53px;
+	}
+	#main{
+		margin: 0 auto;
+		width:998px;
+	}
+	
+	.xpt{
+		position:absolute;
+		height:60px;
+		width:60px;
+		top:100px;
+		left:100px;
+		
+	}
+	ul,ol{
+		margin: 5px;
+		padding: 0;
+		float:left;
+		list-style-type: none;
+		width: 489px;
+		height: 492px;
+		background-color:antiquewhite;
+	}
+	li{
+		width:163px;
+		height: 164px;
+		float: left;
+	}
+	span{
+		color:black;
+		font-size:20px;
+	}
+	i{
+		color:#B8C163;
+		font-style:normal;
+	}
+	img{
+		display: none;
+	}
+	#yd5{
+	position:absolute;
+	left:30px;
+		top:20px;}
+	#yd5:hover{
+	transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+<div class="a1">
+	<a href="game.html">
+		<img src="image/fhsy.png" alt="返回" width="130" id="yd5">
+		</a>
+<h3>拼拼乐
+  <input type="button" name="button" id="button" value="开始游戏">
+  
+  <i></i>
+</h3>
+
+<div id="main">
+<ul>
+  <li><img src="image/pt3.png" width="163" height="164" alt="" draggable="true" id="drag3" /></li>
+  <li><img src="image/pt6.png" width="163" height="164" alt="" draggable="true" id="drag6" /></li>
+  <li><img src="image/pt7.png" width="163" height="164" alt="" draggable="true" id="drag7" /></li>
+  <li><img src="image/pt4.png" width="163" height="164" alt="" draggable="true" id="drag4" /></li>
+  <li><img src="image/pt9.png" width="163" height="164" alt="" draggable="true" id="drag9" /></li>
+  <li><img src="image/pt2.png" width="163" height="164" alt="" draggable="true" id="drag2" /></li>
+  <li><img src="image/pt5.png" width="163" height="164" alt="" draggable="true" id="drag5" /></li>
+  <li><img src="image/pt1.png" width="163" height="164" alt="" draggable="true" id="drag1" /></li>
+  <li><img src="image/pt8.png" width="163" height="164" alt="" draggable="true" id="drag8" /></li>
+</ul>
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+</div>
+	
+</div>
+<script>
+	var oS=document.getElementsByTagName("ul")[0].children;
+	var  oD=document.getElementsByTagName("ol")[0].children;
+	var oImg=document.getElementsByTagName("img");
+	var gStart=document.getElementById("button");
+	var oSpan=document.getElementsByTagName("span")[0];
+	var iI=document.getElementsByTagName("i")[0];	
+	var hh,mm,ss;
+	var st=0;
+	var js;
+	gStart.onclick=function(){
+		for(i=0;i<oImg.length;i++){
+		   oImg[i].style.display="block";
+		}
+		js=setInterval(ct,1000);			
+	}
+	
+	
+	for(i=0;i<oD.length;i++){
+	oImg[i].ondragstart=function drag(e){
+		e=e||event;
+        e.dataTransfer.setData("Text",e.target.id);
+    }
+	
+		//console.log(oD[i]);
+	oD[i].ondragover= function allowDrop(e){
+		e=e||event;
+        e.preventDefault();//避免浏览器对数据的默认处理
+    };
+	oD[i].ondrop=function drop(e){
+	 //if(!this.children.length)
+	 if(!this.hasChildNodes())
+	 {
+	 e=e||event;
+     e.preventDefault();//避免浏览器对数据的默认处理,drop 事件的默认行为是以链接形式打开，不同浏览器有差异
+     
+		var data=e.dataTransfer.getData("Text");//该方法返回在 setData() 方法中设置的数据，即被拖元素的 id。
+		 this.appendChild(document.getElementById(data));//把被拖元素追加到目标元素中
+		 checkF();		 	 
+    }
+	}
+	}	
+	function checkF(){
+		//var count=0;
+		for(j=0;j<oD.length;j++){ 
+			if(!oD[j].hasChildNodes()){
+				return false;
+			}
+			else{
+				var imgSrc=oD[j].children[0].src;
+				var lastD=imgSrc.lastIndexOf(".");
+				var index=Number(imgSrc.slice(lastD-2,lastD));
+				if(index!=j+1)
+					return false;				
+			}
+		}
+			clearInterval(js);
+			iI.innerHTML="拼图成功！";
+	
+	}
+	</script>
+	
+</body>
+</html>

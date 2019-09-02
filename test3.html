@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>习题练练</title>
+<style type="text/css">
+a img{border:0;}
+a img:hover{border:0;}
+body{
+	margin:0;}
+/*内容*/
+#cs{
+	background:url(image/lx1.png) no-repeat;
+	width:1000px;
+	height:620px; 
+	margin:0 auto;
+	position:relative;}
+#cs h1{
+	position:absolute;
+	top:200px;
+	left:430px;
+	font-family:"幼圆";
+	color:#575757;}
+#tm{
+	position:absolute;
+	top:200px;
+	left:190px;
+	width:550px;
+	height:300px;
+	font-family:"幼圆";
+	color:#575757;
+	font-weight:bold;}
+#tm h2{
+	font-size:21px;
+	}
+#tm ul{
+	font-size:18px;
+	}
+#tj{
+	background-color:#ECC7C1;
+	border:0;
+	font-family:"幼圆";
+	color:#575757;
+	font-weight:bold;
+	height:27px;
+	width:55px;
+	font-size:18px;
+	border-radius:3px;
+	position:absolute;
+	left:295px;
+	}
+#zq{
+	position:absolute;
+	width:430px;
+	height:60px;
+	left:200px;
+	top:110px;
+	font-family:"幼圆";
+	color:#926A5E;
+	font-size:20px;
+	font-weight:bold;
+	}
+/*内容*/
+
+
+/*上一页*/
+#syy a img{
+	position:absolute;
+	top:450px;
+	left:170px;
+	
+	}
+#syy a img:hover{
+	  width:75px;
+	  height:65px;
+	 
+	}
+/*上一页*/
+/*下一页*/
+#xyy a img{
+	position:absolute;
+	top:450px;
+	left:680px;
+	
+	}
+#xyy a img:hover{
+	  width:75px;
+	  height:65px;
+	 
+	}	
+/*下一页*/
+</style>
+<script type="text/javascript">
+function myFunction()
+{
+	var abc=document.myform.answer.value;
+
+	if(abc==abc=="answer3" || abc=="answer2" )
+	{document.getElementById("zq").innerHTML = "小朋友，你做错了哦！请再好好想一想吧！";
+	audio2.play(); 
+	}
+	else if(abc=="answer1")
+	{document.getElementById("zq").innerHTML = "恭喜你答对了！小朋友，你真棒！";
+	audio1.play(); 
+}
+	else
+	{document.getElementById("zq").innerHTML="小朋友，你还没有做题哦！";
+	audio2.play(); 
+}
+}
+</script>
+</head>
+
+<body>
+<div id="cs">
+<!--内容-->
+<div id="tm">
+<h2>3&nbsp;.&nbsp;(选择题)黄奇奇在假期摔断了腿，来到学校后，还是不能正常地行走，我们看到后应该怎么做？</h2>
+<form action="" method="post" name="myform" id="myform">
+<ul style="list-style:none;">
+<li><input type="radio" value="answer1" name="answer" />关心她，帮助她</li>
+<li><input type="radio" value="answer2" name="answer" />学她走路的样子</li>
+<li><input type="radio" value="answer3" name="answer" />远离她，不和她一起玩</li>
+
+</ul>
+<input type="button" value="查看" name="submit" onClick="myFunction()" id="tj" >
+<div id="zq" >
+
+</div>
+
+</form>
+</div>
+<div id="syy">
+<a href="test2.html"><img src="image/fhsy.png" width="70px" height="60px"></a>
+</div>
+<div id="xyy">
+<a href="test4.html"><img src="image/next.png" width="70px" height="60px"></a>
+</div>
+<!--内容-->
+
+</div>
+</body>
+</html>

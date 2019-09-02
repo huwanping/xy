@@ -16,12 +16,32 @@
 	top:15px;
 	
 		}
+		#jt1{
+			position: absolute;
+			left: 110px;
+			top: 7px;
+		}
+		#jt2{
+			position: absolute;
+			left: 850px;
+			top: 7px;
+		}
+		#game1{
+	position:absolute;
+	left:240px;
+	top:7px;	
+}
+		#game2{
+	position:absolute;
+	left:570px;
+	top:30px;	
+}
 		#yd5{
 	position:absolute;
 	left:25px;
 	top:530px;	
 }
-		#yd5:hover{
+		#game2:hover,#game1:hover,#yd5:hover{
 	transform:scale(1.1);
 }
 	</style>
@@ -29,8 +49,12 @@
 
 <body>
 	<div class="a1">
-	<img src="image/game.png" width="1000px" height="630px" alt="游戏背景">
+	<img src="image/game.png" width="1000px" height="630px" alt="游戏首页背景">
 		<div class="list">
+			<img src="image/jt.png" id="jt1">
+			<img src="image/jt1.png" id="jt2">
+		<a href="game1.html"><img src="image/game1.png" id="game1" width="190px" title="拼拼乐"></a>
+		<a href="game2.html"><img src="image/game2.png" id="game2" width="285px" title="趣拖拖"></a>
 		<a href="catalog.html">
 		<img src="image/fhsy.png" alt="返回目录" width="130" id="yd5">
 		</a>

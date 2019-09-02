@@ -158,18 +158,19 @@
 		</a>		
 	</div>
 <div class="lb">   	
-    	<audio src="music/catalog.mp3" controls preload id="music" hidden></audio>
-    	<lable id="bf" onClick="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
+    	<audio controls preload id="music" hidden autoplay="autoplay">
+	<source  src="music/catalog.mp3">
+	</audio>
+    	<lable id="bf" window.onload="bf();"><img src="image/lb.png" width="35px" height="35px" alt="广播"></lable>
     	<script>
 			function bf(){
 				var audio=document.getElementById('music');
-				if(audio.paused){
-					audio.play();
-				}
+					if(audio.onpause)
+					{audio.play();
+			}
 				else{
 					audio.pause();
-			}
-			}
+				}
 			</script>
 </div>
 	<!--导航栏-->
