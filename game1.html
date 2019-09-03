@@ -19,15 +19,6 @@
 		margin: 0 auto;
 		width:998px;
 	}
-	
-	.xpt{
-		position:absolute;
-		height:60px;
-		width:60px;
-		top:100px;
-		left:100px;
-		
-	}
 	ul,ol{
 		margin: 5px;
 		padding: 0;
@@ -47,7 +38,7 @@
 		font-size:20px;
 	}
 	i{
-		color:#B8C163;
+		color:red;
 		font-style:normal;
 	}
 	img{
@@ -56,35 +47,38 @@
 	#yd5{
 	position:absolute;
 	left:30px;
-		top:20px;}
+		top:5px;}
 	#yd5:hover{
 	transform:scale(1.1);
 }
+	#pt{
+		position: absolute;
+		right: 100px;
+		top: -25px;
+	}
+	
 </style>
 </head>
 
 <body>
 <div class="a1">
-	<a href="game.html">
-		<img src="image/fhsy.png" alt="返回" width="130" id="yd5">
-		</a>
+
 <h3>拼拼乐
-  <input type="button" name="button" id="button" value="开始游戏">
-  
+ <input type="image" name="button" id="button" src="image/start.png" width="100px" value="开始游戏">
   <i></i>
 </h3>
 
 <div id="main">
 <ul>
-  <li><img src="image/pt3.png" width="163" height="164" alt="" draggable="true" id="drag3" /></li>
-  <li><img src="image/pt6.png" width="163" height="164" alt="" draggable="true" id="drag6" /></li>
-  <li><img src="image/pt7.png" width="163" height="164" alt="" draggable="true" id="drag7" /></li>
+  <li><img src="image/pt3.png" width="163" height="164" alt="" draggable="true" id="drag1" /></li>
+  <li><img src="image/pt6.png" width="163" height="164" alt="" draggable="true" id="drag2" /></li>
+  <li><img src="image/pt7.png" width="163" height="164" alt="" draggable="true" id="drag3" /></li>
   <li><img src="image/pt4.png" width="163" height="164" alt="" draggable="true" id="drag4" /></li>
-  <li><img src="image/pt9.png" width="163" height="164" alt="" draggable="true" id="drag9" /></li>
-  <li><img src="image/pt2.png" width="163" height="164" alt="" draggable="true" id="drag2" /></li>
-  <li><img src="image/pt5.png" width="163" height="164" alt="" draggable="true" id="drag5" /></li>
-  <li><img src="image/pt1.png" width="163" height="164" alt="" draggable="true" id="drag1" /></li>
-  <li><img src="image/pt8.png" width="163" height="164" alt="" draggable="true" id="drag8" /></li>
+  <li><img src="image/pt9.png" width="163" height="164" alt="" draggable="true" id="drag5" /></li>
+  <li><img src="image/pt2.png" width="163" height="164" alt="" draggable="true" id="drag6" /></li>
+  <li><img src="image/pt5.png" width="163" height="164" alt="" draggable="true" id="drag7" /></li>
+  <li><img src="image/pt1.png" width="163" height="164" alt="" draggable="true" id="drag8" /></li>
+  <li><img src="image/pt8.png" width="163" height="164" alt="" draggable="true" id="drag9" /></li>
 </ul>
 <ol>
   <li></li>
@@ -98,8 +92,11 @@
   <li></li>
 </ol>
 </div>
-	
-</div>
+	<a href="game.html">
+		<img src="image/fhsy.png" alt="返回" width="130" id="yd5">
+		</a>
+	<img src="image/pt.jpg" width="120" height="120" id="pt">
+	</div>
 <script>
 	var oS=document.getElementsByTagName("ul")[0].children;
 	var  oD=document.getElementsByTagName("ol")[0].children;
@@ -158,9 +155,24 @@
 		}
 			clearInterval(js);
 			iI.innerHTML="拼图成功！";
+			/*if(oD[j].hasChildNodes())
+			{
+				var imgSrc=oD[j].children[0].src;
+				var lastD=imgSrc.lastIndexOf(".");
+				var index=Number(imgSrc.slice(lastD-2,lastD));
+				if(index==j+1){
+					count++;
+				}		
+			 
+		    }
+		}
+		if(count==oD.length)
+			{
+				clearInterval(js);
+				iI.innerHTML="拼图成功！";
+			}*/
 	
 	}
 	</script>
-	
 </body>
 </html>
