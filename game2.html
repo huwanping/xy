@@ -29,11 +29,13 @@ function change_img3(e){
 		document.getElementById("y58").style.display = "block";
     }
 }
+
 function change_img4(e){
     var aaa = e.name;
     if(aaa == "sure????"){
         document.getElementById("b4").style.display = "none";
         document.getElementById("y55").style.display = "block";
+		document.getElementById("y59").style.display = "block";
     }
 }
 
@@ -47,30 +49,30 @@ body{
 }
 #b1 {
 	position: absolute;
-	left: 50px;
+	left: 10px;
 	top: 70px;
 }
 #b2 {
 	position: absolute;
-	left: 50px;
+	left: 10px;
 	top: 170px;
 }
 #b3 {
 	position: absolute;
-	left: 50px;
+	left: 10px;
 	top: 270px;
 }
 #b4 {
 	position: absolute;
-	left: 50px;
+	left:10px;
 	top: 370px;
 }
 
 
 #y50{
 	position: absolute;
-	left: 750px;
-	top: 355px;
+	left: 820px;
+	top: 255px;
 }
 #y51{
 	position: absolute;
@@ -89,12 +91,12 @@ body{
 }
 #y54{
 	position: absolute;
-	left: 585px;
-	top: 370px;
+	left: 660px;
+	top: 410px;
 }
 #y55{
 	position: absolute;
-	left: 455px;
+	left: 495px;
 	top: 370px;
 }
 #y56{
@@ -111,8 +113,15 @@ body{
 }
 #y58{
 	position: absolute;
-	left: 530px;
-	top: 480px;
+	left: 550px;
+	top: 460px;
+		
+}
+	#y59{
+	position: absolute;
+	left: 550px;
+	top: 460px;
+	
 	
 }
 
@@ -188,26 +197,29 @@ li {
 <div id="box">
 <img src="image/game4.png" width="1000px" height="630px" alt="背景">
 
-<p><a href="#" class="badplay1"><img src="image/yxdh1.png" id="b1"  onclick="change_img1(this)" name="sure?"  width="130px" height="100px"></a>
-  <a href="#" class="badplay2"><img src="image/yxdh3.png" id="b2"  onclick="change_img2(this)" name="sure??" width="135px" height="100px" ></a>
-  <a href="#" class="goodplay1"><img src="image/yxdh2.png" id="b3"  onclick="change_img3(this)" name="sure???" width="135px" height="100px" ></a>
-  <a href="#" class="badplay3"><img src="image/yxdh4.png" id="b4"  onclick="change_img4(this)" name="sure????" width="135px" height="100px" ></a>
+<p><a href="#" class="badplay1"><img src="image/yxdh1.png" id="b1"  onclick="change_img1(this)" name="sure?"  width="180px" height="100px"></a>
+  <a href="#" class="badplay2"><img src="image/yxdh3.png" id="b2"  onclick="change_img2(this)" name="sure??" width="180px" height="100px" ></a>
+  <a href="#" class="goodplay1"><img src="image/yxdh2.png" id="b3"  onclick="change_img3(this)" name="sure???" width="180px" height="100px" ></a>
+  <a href="#" class="badplay3"><img src="image/yxdh4.png" id="b4"  onclick="change_img4(this)" name="sure????" width="180px" height="100px" ></a>
   </p>
 
 
-<img src="image/yxxr1.png" width="187" height="247" id="y50">
+<img src="image/yxxr1.png" width="177" height="237" id="y50">
 
 
-<img src="image/yxdh1.png" width="150px" height="150px" id="y52" class="yg" style="display:none">
+<img src="image/yxdh1.png" width="180px" height="100px" id="y52" class="yg" style="display:none">
 
-<img src="image/yxdh3.png" width="150px" height="150px" id="y53" class="xzd" style="display:none">
+<img src="image/yxdh3.png" width="180px" height="100px" id="y53" class="xzd" style="display:none">
 
- <img src="image/yxdh2.png" width="150px" height="150px" id="y54" class="jsj" style="display:none">
+ <img src="image/yxdh2.png" width="180px" height="100px" id="y54" class="jsj" style="display:none">
 
-<img src="image/yxdh4.png" width="150px" height="150px" id="y55" class="mrwj" style="display:none">
+<img src="image/yxdh4.png" width="180px" height="100px" id="y55" class="mrwj" style="display:none">
+
 <img src="image/yxxr2.png" width="150px" height="150px" id="y56" style="display:none">
-<img src="image/yxxr2.png" width="150px" height="150px" id="y57" style="display:none"> 
-<img src="image/yxxr3.png" width="150px" height="150px" id="y58" style="display:none">
+<img src="image/yxxr2.png" width="150px" height="150px" id="y57" style="display:none">
+<img src="image/yxxr3.png" width="140px" height="160px" id="y58" style="display:none">
+<img src="image/yxxr3.png" width="140px" height="160px" id="y59" style="display:none">
+
 
 <div id="footer">
 <a href="game.html"><img src="image/fhsy.png" id="back"width="93" height="45"></a>
